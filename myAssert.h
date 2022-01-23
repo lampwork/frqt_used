@@ -28,7 +28,7 @@ void Assert(char *filename, unsigned int lineno);
 #define ERR(str, ...)                                                                  \
     do                                                                                 \
     {                                                                                  \
-        fprintf(stderr, "[*DBG*]:%s Line:%d " str, __FILE__, __LINE__, ##__VA_ARGS__); \
+        fprintf(stderr, "[*ERR*]:%s Line:%d " str, __FILE__, __LINE__, ##__VA_ARGS__); \
     } while (0)
 
 #endif
