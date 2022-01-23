@@ -19,4 +19,16 @@ else\
 #endif
 void Assert(char *filename, unsigned int lineno);
 
+#define DBG(str, ...)                                                                  \
+    do                                                                                 \
+    {                                                                                  \
+        fprintf(stdout, "[*DBG*]:%s Line:%d " str, __FILE__, __LINE__, ##__VA_ARGS__); \
+    } while (0)
+
+#define ERR(str, ...)                                                                  \
+    do                                                                                 \
+    {                                                                                  \
+        fprintf(stderr, "[*DBG*]:%s Line:%d " str, __FILE__, __LINE__, ##__VA_ARGS__); \
+    } while (0)
+
 #endif
